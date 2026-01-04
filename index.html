@@ -32,7 +32,10 @@
     contact_location: "Basé à Marseille, présent à Paris et à l’international.",
     contact_button: "Envoyer le message",
     linkedin_text: "Prendre contact avec Olivier sur LinkedIn",
-    footer_privacy: "Privacy Policy"
+    footer_privacy: "Privacy Policy",
+    ma_vision: "J’ai fondé **The Human Partner** pour exercer le conseil en Executive Search et en Leadership Advisory avec exigence, humilité, curiosité et sens du collectif.\n\nAprès plus de trente ans à concevoir, développer et transformer des organisations de conseil en France et à l’international — en Europe, au Brésil, au Royaume-Uni et en Suisse — je fais un choix clair : me consacrer à ce qui crée le plus de valeur durable&nbsp;: la qualité du leadership et la construction d’équipes au service de visions et de stratégies ambitieuses.\n\nDans un monde où la technologie accélère tout, la justesse reste un travail exigeant et en profondeur. Elle se construit dans le temps, par la nuance, la confiance et l’écoute réellement active.",
+    ma_methode: "**Clarifier le cap**:  Vision, priorités, zones de risque, critères non négociables.\n\n**Cartographier les talents**:  Une lecture de marché approfondie, enrichie par la technologie et l’IA, pour identifier des profils réellement pertinents — pas simplement visibles.\n\n**Évaluer en profondeur**:  Leadership, culture, dynamique interne et capacité d’impact, car la réussite dépend autant du contexte que de l’individu.\n\n**Sécuriser la décision**:  Gouvernance claire, alignement des attentes, compréhension précise des responsabilités.\n\n**Ancrer la réussite**:  Accompagnement de l’intégration pour inscrire la performance dans la durée."
+
   };
   </script>
   
@@ -77,26 +80,10 @@
   <div class="container">
     <h2>Ma Vision</h2>
 
-    <p>
-      J’ai fondé <strong>The Human Partner</strong> pour exercer le conseil en
-      Executive Search et en Leadership Advisory avec exigence, humilité,
-      curiosité et sens du collectif.
-    </p>
+    <p data-content="ma_vision"></p>
 
-    <p>
-      Après plus de trente ans à concevoir, développer et transformer des
-      organisations de conseil en France et à l’international — en Europe,
-      au Brésil, au Royaume-Uni et en Suisse — je fais un choix clair :
-      me consacrer à ce qui crée le plus de valeur durable&nbsp;:
-      la qualité du leadership et la construction d’équipes au service
-      de visions et de stratégies ambitieuses.
-    </p>
 
-    <p>
-      Dans un monde où la technologie accélère tout, la justesse reste
-      un travail exigeant et en profondeur. Elle se construit dans le temps,
-      par la nuance, la confiance et l’écoute réellement active.
-    </p>
+
     <blockquote class="pull-quote">
       Je crois à une performance qui compte vraiment&nbsp;:
       <strong>collective, durable, et alignée avec les valeurs,
@@ -195,33 +182,8 @@
 
     <h3>Ma méthode</h3>
 
-    <p>
-        <strong>Clarifier le cap</strong>:
-        Vision, priorités, zones de risque, critères non négociables.
-      </p>
 
-      <p>
-        <strong>Cartographier les talents</strong>:
-        Une lecture de marché approfondie, enrichie par la technologie et l’IA,
-        pour identifier des profils réellement pertinents — pas simplement visibles.
-      </p>
-
-      <p>
-        <strong>Évaluer en profondeur</strong>:
-        Leadership, culture, dynamique interne et capacité d’impact,
-        car la réussite dépend autant du contexte que de l’individu.
-      </p>
-
-      <p>
-        <strong>Sécuriser la décision</strong>:
-        Gouvernance claire, alignement des attentes,
-        compréhension précise des responsabilités.
-      </p>
-
-      <p>
-        <strong>Ancrer la réussite</strong>:
-        Accompagnement de l’intégration pour inscrire la performance dans la durée.
-      </p>
+    <p data-content="ma_methode"></p>
   </article>
   <article class="card-h">
     <h3>Mes principes</h3>
@@ -294,13 +256,21 @@
 <!-- =========================
      JS 
 ========================= -->
+<!-- Marked library from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
 <script>
   document.querySelectorAll("[data-content]").forEach(el => {
     const key = el.dataset.content;
     if (CONTENT[key]) {
-      el.textContent = CONTENT[key];
+//      el.textContent = CONTENT[key];
+      el.innerHTML = marked.parse(CONTENT[key]);
     }
   });
+
+
+
+
 </script>
 
 <script src="/nav.js" defer></script>
