@@ -25,7 +25,7 @@
       &#9776;
     </button>
 
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Navigation principale">
       <a href="/#vision" >Ma Vision</a>
       <a href="/#expertise" >Mon Expertise</a>
       <a href="/#contact" >Contactez-moi</a>
@@ -33,7 +33,6 @@
   </div>
 </header>
 
-<main>
 
 
 
@@ -149,27 +148,7 @@
     <p>© 2026 The Human Partner</p>
   </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const hamburger = document.querySelector('.hamburger');
-      const navLinks = document.querySelector('.nav-links');
-  
-      if (!hamburger || !navLinks) return; // safety guard
-  
-      hamburger.addEventListener('click', () => {
-        const isOpen = navLinks.classList.toggle('active');
-        hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      });
-  
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-          navLinks.classList.remove('active');
-          hamburger.setAttribute('aria-expanded', 'false');
-        });
-      });
-    });
-  </script>
-  
+  <script src="/nav.js" defer></script>
   
 
 </body>
