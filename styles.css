@@ -233,9 +233,9 @@ p {
 ul,
 ol {
   font-size: var(--text-body);
-  line-height: 1.4;
+  line-height: 1.6;
   margin: var(--space-md) 0;
-  padding-left: 1.4em; /* keeps bullets aligned nicely */
+  padding-left: 2.4em; /* keeps bullets aligned nicely */
 }
 
 li {
