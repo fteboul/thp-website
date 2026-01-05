@@ -82,7 +82,7 @@
   <div class="container">
     <!--img src="/images/Logo2.svg" class="hero-logo" alt="" /> -->
     <h1>THE <span class='accent'>H</span>UMAN PARTNER</h1>
-    <h2>Executive Search <span class='hide-mobile'>| </span><br class='mobile-break'>Leadership Advisory</h2>
+    <h2>EXECUTIVE SEARCH <span class='hide-mobile'>| </span><br class='mobile-break'>LEADERSHIP ADVISORY</h2>
   </div>
 </section>
 
@@ -189,7 +189,7 @@
       const isMarkdown = key.endsWith("_md");
       if (!isMarkdown) {
         // Plain text only
-        el.textContent = value;
+        el.innerHTML = CONTENT[key];
         return;
       }
 //      el.textContent = CONTENT[key];
