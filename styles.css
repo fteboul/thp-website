@@ -278,7 +278,7 @@ li {
 }
 
 .hero h1 {
-  font-size: clamp(3.0rem, 5vw, 3.6rem);
+  font-size: clamp(2.6rem, 5vw, 3.8rem);
   font-weight: 400;
   margin: var(--space-xl) 0 0 0;
   text-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
