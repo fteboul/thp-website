@@ -267,6 +267,13 @@ li {
   text-align: center;
 }
 
+@media (max-width: 768px) and (orientation: portrait) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("/images/THP-marseille-less-sky3.jpg");
+  }
+}
+
+
 .hero .container {
   padding-top: var(--space-xl);
   padding-bottom: calc(var(--space-xl) * 2);
