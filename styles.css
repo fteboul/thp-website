@@ -270,7 +270,7 @@ li {
 @media (max-width: 768px) and (orientation: portrait) and (min-resolution: 2dppx) {
   .hero {
     background-image: url("/images/THP-marseille-mobile4.jpeg");
-    background-size: 110%;
+    background-size: 140%;
     min-height: 80vh;
   }
 }
