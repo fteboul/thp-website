@@ -546,7 +546,7 @@ li {
 }
 
 .privacy a {
-  color: var(--accent);
+  color: var(--accent-soft);
   text-decoration: underline;
 }
 
