@@ -271,7 +271,7 @@ li {
   .hero {
     background-image: url("/images/THP-marseille-mobile5.jpeg");
     background-size: 140%;
-    min-height: 80vh;
+    min-height: 100vh;
   }
 }
 
